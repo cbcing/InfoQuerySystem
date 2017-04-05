@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE struts PUBLIC
+        "-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+        "http://struts.apache.org/dtds/struts-2.3.dtd">
+
+<!--suppress ALL -->
+<struts>
+    <package name="default" extends="struts-default" namespace="/">
+
+        <action name="customer" class="com.scujcc.struts.action.CustomerAction">
+            <result name="success" type="dispatcher">customers.jsp</result>
+        </action>
+
+        <action name="getCustomers" class="com.scujcc.struts.action.CustomerAction" method="getCustomers">
+            <result name="success" type="redirectAction">customer</result>
+        </action>
+
+        <action name="order" class="com.scujcc.struts.action.OrderAction">
+            <result name="success" type="dispatcher">orders.jsp</result>
+        </action>
+e
+        <action name="getOrdersByDate" class="com.scujcc.struts.action.OrderAction" method="getOrdersByDate">
+            <result name="success" type="dispatcher">orders.jsp</result>
+        </action>
+    </package>
+</struts>
